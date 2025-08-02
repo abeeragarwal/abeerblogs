@@ -25,8 +25,11 @@ jobs:
 
       - name: Setup Hugo
         run: |
-          curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.125.4/hugo_extended_0.125.4_linux-amd64.tar.gz'
+          curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_linux-amd64.tar.gz'
           tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo
+
+      - name: Install Hugo modules
+        run: ${RUNNER_TEMP}/hugo mod get
 
       - name: Build
         run: ${RUNNER_TEMP}/hugo
