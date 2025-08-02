@@ -2,4 +2,4 @@
 title: "Blog"
 ---
 
-Welcome to my blog posts!
+Welcome to my blog page!
