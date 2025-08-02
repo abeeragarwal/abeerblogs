@@ -1,6 +1,6 @@
 baseURL: "https://abeeragarwal.github.io/abeerblogs/"
 languageCode: en-us
-title: My New Hugo Site
+title: Home
 theme: PaperMod
 enableInlineShortcodes: true
 defaultContentLanguage: "en"
@@ -31,10 +31,6 @@ params:
 
 menu:
   main:
-    - identifier: home
-      name: Home
-      url: /
-      weight: 1
     - identifier: blog
       name: Blog
       url: /docs/
