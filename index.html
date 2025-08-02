@@ -20,40 +20,13 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://abeeragarwal.github.io/abeerblogs/index.xml">
+<link rel="alternate" type="application/json" href="https://abeeragarwal.github.io/abeerblogs/index.json">
 <link rel="alternate" hreflang="en" href="https://abeeragarwal.github.io/abeerblogs/">
 <noscript>
     <style>
         #theme-toggle,
         .top-link {
             display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
         }
 
     </style>
@@ -75,7 +48,7 @@
   "description": "",
   "logo": "https://abeeragarwal.github.io/abeerblogs/favicon.ico",
   "sameAs": [
-      
+      "https://github.com/abeeragarwal", "https://linkedin.com/in/your-linkedin"
   ]
 }
 </script>
@@ -84,10 +57,6 @@
 <body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -121,38 +90,77 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://abeeragarwal.github.io/abeerblogs/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://abeeragarwal.github.io/abeerblogs/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://abeeragarwal.github.io/abeerblogs/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
-<main class="main"> 
+<main class="main"><div class="profile">
+    <div class="profile_inner">
+        <img draggable="false" src="https://abeeragarwal.github.io/abeerblogs/images/profile.jpg" alt="Abeer Agarwal" title="Abeer Agarwal"
+            height="150" width="150" />
+        <h1>Abeer Agarwal</h1>
+        <span>CS Student • Blogger • Explorer</span><div class="social-icons" >
+    <a href="https://github.com/abeeragarwal" target="_blank" rel="noopener noreferrer me"
+        title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer me"
+        title="Linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+    </a>
+</div>
 
-<article class="first-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Test Post 2
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>TEST TEST WORKING WORKING MADRE PADRE HALPO ME
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-08-02 00:00:00 +0000 UTC'>August 2, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Test Post 2" href="https://abeeragarwal.github.io/abeerblogs/docs/test-post-2/"></a>
-</article>
+        <div class="buttons">
+            <a class="button" href="https://github.com/abeeragarwal" rel="noopener" title="GitHub">
+                <span class="button-inner">
+                    GitHub&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </span>
+            </a>
+            <a class="button" href="https://linkedin.com/in/your-linkedin" rel="noopener" title="LinkedIn">
+                <span class="button-inner">
+                    LinkedIn&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Blog Post
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Why I Use Obsidian for Everything (And You Might Want To) “Your mind is for having ideas, not holding them.” – David Allen When I first started taking notes seriously, I bounced between apps — Google Keep, Notion, Evernote, even paper journals. But nothing quite stuck. Then I found Obsidian.
-And it changed everything.
-What Is Obsidian? Obsidian is a markdown-based note-taking app that treats your notes like a personal knowledge base. It stores your content in plain .md files, meaning you own your notes forever — no cloud lock-in, no proprietary formats.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-08-01 00:00:00 +0000 UTC'>August 1, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to My First Blog Post" href="https://abeeragarwal.github.io/abeerblogs/docs/my-first-blog-post/"></a>
-</article>
     </main>
     
 <footer class="footer">

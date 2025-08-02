@@ -28,34 +28,6 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
 </noscript><meta property="og:url" content="https://abeeragarwal.github.io/abeerblogs/docs/">
   <meta property="og:site_name" content="My New Hugo Site">
   <meta property="og:title" content="Docs">
@@ -85,10 +57,6 @@
 <body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -122,6 +90,21 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://abeeragarwal.github.io/abeerblogs/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://abeeragarwal.github.io/abeerblogs/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://abeeragarwal.github.io/abeerblogs/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -141,7 +124,7 @@
     <p>TEST TEST WORKING WORKING MADRE PADRE HALPO ME
 </p>
   </div>
-  <footer class="entry-footer"><span title='2025-08-02 00:00:00 +0000 UTC'>August 2, 2025</span></footer>
+  <footer class="entry-footer"><span title='2025-08-02 00:00:00 +0000 UTC'>August 2, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to Test Post 2" href="https://abeeragarwal.github.io/abeerblogs/docs/test-post-2/"></a>
 </article>
 
@@ -156,7 +139,7 @@ And it changed everything.
 What Is Obsidian? Obsidian is a markdown-based note-taking app that treats your notes like a personal knowledge base. It stores your content in plain .md files, meaning you own your notes forever — no cloud lock-in, no proprietary formats.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-08-01 00:00:00 +0000 UTC'>August 1, 2025</span></footer>
+  <footer class="entry-footer"><span title='2025-08-01 00:00:00 +0000 UTC'>August 1, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to My First Blog Post" href="https://abeeragarwal.github.io/abeerblogs/docs/my-first-blog-post/"></a>
 </article>
     </main>
