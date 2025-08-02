@@ -6,24 +6,20 @@ enableInlineShortcodes: true
 defaultContentLanguage: "en"
 
 params:
-  homeInfoParams:
-    Title: "👋 Hey there, I'm Abeer!"
-    Content: "Welcome to my blog where I explore DSA, tech tools, and coding adventures."
-
   profileMode:
     enabled: true
     title: "Abeer Agarwal"
-    subtitle: "CS Student • Blogger • Explorer"
+    subtitle: "Developer • Blogger • Problem Solver"
     imageUrl: "images/profile.jpg"
     imageTitle: "Abeer Agarwal"
     buttons:
       - name: "GitHub"
         url: "https://github.com/abeeragarwal"
       - name: "LinkedIn"
-        url: "https://linkedin.com/in/your-linkedin"
+        url: "https://www.linkedin.com/in/abeer-agarwal/"
 
-  colorScheme: "nord"         # Try 'auto', 'light', 'dark', 'nord', etc.
-  defaultTheme: "light"       # Options: 'auto', 'light', 'dark'
+  colorScheme: "nord"
+  defaultTheme: "light"
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -33,7 +29,7 @@ params:
     - name: github
       url: "https://github.com/abeeragarwal"
     - name: linkedin
-      url: "https://linkedin.com/in/your-linkedin"
+      url: "https://www.linkedin.com/in/abeer-agarwal/"
 
 menu:
   main:
@@ -43,7 +39,7 @@ menu:
       weight: 1
     - identifier: blog
       name: Blog
-      url: /posts/
+      url: /docs/
       weight: 2
     - identifier: about
       name: About
@@ -55,9 +51,3 @@ outputs:
     - HTML
     - RSS
     - JSON
-
-# Optional: custom CSS support if needed later
-# params:
-#   assets:
-#     customCSS:
-#       - "css/custom.css"

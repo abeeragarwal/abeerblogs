@@ -6,7 +6,7 @@ $hugoImages = "C:\Users\2006a\OneDrive\Documentos\abeerblogs\static\images"
 $hugoRepo = "C:\Users\2006a\OneDrive\Documentos\abeerblogs"
 
 # === STEP 1: Sync content and images ===
-robocopy $obsidianPosts $hugoContent /E /MIR
+robocopy $obsidianPosts $hugoContent /E /MIR /XF _index.md
 robocopy $obsidianImages $hugoImages /E /MIR
 
 # === STEP 2: Rewrite image paths in Markdown files ===
