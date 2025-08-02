@@ -2,3 +2,62 @@ baseURL: "https://abeeragarwal.github.io/abeerblogs/"
 languageCode: en-us
 title: My New Hugo Site
 theme: PaperMod
+enableInlineShortcodes: true
+defaultContentLanguage: "en"
+
+params:
+  homeInfoParams:
+    Title: "👋 Hey there, I'm Abeer!"
+    Content: "Welcome to my blog where I explore DSA, tech tools, and coding adventures."
+
+  profileMode:
+    enabled: true
+    title: "Abeer Agarwal"
+    subtitle: "CS Student • Blogger • Explorer"
+    imageUrl: "images/profile.jpg"
+    imageTitle: "Abeer Agarwal"
+    buttons:
+      - name: "GitHub"
+        url: "https://github.com/abeeragarwal"
+      - name: "LinkedIn"
+        url: "https://linkedin.com/in/your-linkedin"
+
+  colorScheme: "nord"         # Try 'auto', 'light', 'dark', 'nord', etc.
+  defaultTheme: "light"       # Options: 'auto', 'light', 'dark'
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowPostSummary: true
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/abeeragarwal"
+    - name: linkedin
+      url: "https://linkedin.com/in/your-linkedin"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 2
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 3
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Optional: custom CSS support if needed later
+# params:
+#   assets:
+#     customCSS:
+#       - "css/custom.css"
