@@ -1,0 +1,4 @@
+baseURL: "https://abeeragarwal.github.io/abeerblogs/"
+languageCode: en-us
+title: My New Hugo Site
+theme: PaperMod
