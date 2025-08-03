@@ -3,6 +3,11 @@ Title: How I started my blogging journey
 date: 2025-08-03
 draft: false
 tags:
+  - blog
+  - tech-journey
+  - obsidian
+  - hugo
+  - github
 ---
 # The Hardest Step is the First step
 
@@ -76,11 +81,122 @@ For me, Obsidian isn’t just a place to jot thoughts—it’s where I:
 - Organize my thoughts without distraction
     
 - Sync with my Hugo blog setup for seamless publishing
-    
 
 It keeps everything **offline**, fast, **and** fully in my **control**.
 
 Just like this blog that I was drafting Obsidian before posting it on this blog!
 
-![[Pasted image 20250803093617.png]]
+---
 
+## Hugo
+
+### What is Hugo?
+
+**Hugo** is a fast, open-source static site generator written in Go. Instead of dynamically generating pages with a backend server, Hugo builds your entire website into plain HTML files that can be served anywhere—blazing fast and completely secure.
+
+With Hugo, you write your content in Markdown, and it handles the layout, theme styling, navigation, and even SEO. It's highly customizable and used by developers who want **speed**, **control**, and **minimal dependencies**.
+
+---
+
+### Why I Use Hugo for building my site
+
+Hugo is the core engine that transforms my plain-text notes into a structured, styled blog.
+
+Here’s what it enables me to do:
+
+- **Convert Markdown to beautiful HTML** with themes like PaperMod which I also used for this blog
+    
+- **Organize posts** using folders and front matter (metadata like title, date, tags)
+    
+- **Customize the layout** of pages exactly how I want them
+    
+- **Build the entire site instantly** with a single command (`hugo`)
+
+It fits perfectly into my writing workflow with Obsidian, where all content is already in Markdown. I can edit locally, build locally, and preview everything before it goes live.
+
+---
+
+### Hugo + GitHub = Seamless Publishing
+
+This is where the magic happens.
+
+Hugo generates the final HTML files, and I use **GitHub Pages** to host them for free. All I do is push the generated `public/` folder (or let a GitHub Action do it automatically), and my blog is updated instantly.
+
+In other words:
+
+- **Obsidian** → where I write
+    
+- **Hugo** → where I build
+    
+- **GitHub Pages** → where I publish
+
+It’s like a pipeline:
+
+`Markdown` → `Hugo` → `HTML` → `GitHub Pages` → **Live blog**
+
+This setup gives me full control over everything—from how my blog looks, to when and how it’s updated. No ads, no paywalls, no platform rules. Just code and content.
+
+---
+
+## Connecting to GitHub Pages
+
+Once Hugo generates the final version of my site (plain HTML, CSS, and JS files), I need a way to **put it online**. That’s where **GitHub Pages** comes in.
+
+### What is GitHub Pages?
+
+**GitHub Pages** is a free hosting service provided by GitHub that lets you deploy static websites directly from a GitHub repository. No servers, no hosting fees—just push your files, and your site is live.
+
+### How I Use GitHub Pages
+
+Here’s how the process works for my blog:
+
+1. **I write posts** in Obsidian (Markdown files).
+    
+2. **Hugo builds** them into a full website.
+    
+3. I **push the generated site** (from the `public/` folder) to a GitHub repository.
+    
+4. GitHub Pages **serves the site automatically** to the world.
+
+### Bonus: Automating the Deploy
+
+To make things even easier, I’ve connected my main content repo to a **GitHub Action**—a small script that runs whenever I push changes.
+
+So instead of manually running `hugo` and copying files, I just:
+
+- Write 
+	
+- Commit 
+	
+- Push 
+	
+- Blog is live
+
+### Why This Matters to Me
+
+This setup:
+
+- Keeps my workflow **entirely developer-friendly**
+    
+- Allows me to **version control** my writing like I would with code
+    
+- Gives me **complete control** over hosting, themes, and design
+    
+- Costs me **nothing** to run
+
+In a world full of no-code tools, I chose to build my own workflow—not because it was easy, but because it was **me**.
+
+---
+
+# Final Thoughts
+
+Starting this blog wasn’t just about publishing posts—it was about **taking ownership** of my learning journey. From writing in Obsidian, building with Hugo, hosting on GitHub Pages, to automating everything with scripts—I’ve created a system that reflects not just what I do, but **who I am** as a developer.
+
+It’s not perfect. It’s not flashy. But it’s **mine**.
+
+If there’s one thing I’ve learned through all of this, it’s that the hardest step is always the first. But once you take it, the path ahead doesn’t feel as scary anymore.
+
+So if you’ve been waiting for the _perfect_ moment to start your own blog, project, or passion—this is your sign:  
+**Start now. Build messy. Learn fast. Refine later.**
+
+Your voice matters. And someone out there is waiting to hear it.
