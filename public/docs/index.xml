@@ -6,27 +6,18 @@
     <description>Recent content in Blog on Home</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/abeerblogs/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test Post 2</title>
-      <link>http://localhost:1313/abeerblogs/docs/test-post-2/</link>
-      <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/abeerblogs/docs/test-post-2/</guid>
-      <description>&lt;p&gt;TEST TEST WORKING WORKING MADRE PADRE HALPO ME&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First Blog Post</title>
-      <link>http://localhost:1313/abeerblogs/docs/my-first-blog-post/</link>
-      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/abeerblogs/docs/my-first-blog-post/</guid>
-      <description>&lt;h2 id=&#34;why-i-use-obsidian-for-everything-and-you-might-want-to&#34;&gt;Why I Use Obsidian for Everything (And You Might Want To)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;“Your mind is for having ideas, not holding them.” – David Allen
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When I first started taking notes seriously, I bounced between apps — Google Keep, Notion, Evernote, even paper journals. But nothing quite stuck. Then I found Obsidian.&lt;/p&gt;
-&lt;p&gt;And it changed everything.&lt;/p&gt;
-&lt;h2 id=&#34;what-is-obsidian&#34;&gt;What Is Obsidian?&lt;/h2&gt;
-&lt;p&gt;Obsidian is a markdown-based note-taking app that treats your notes like a personal knowledge base. It stores your content in plain .md files, meaning you own your notes forever — no cloud lock-in, no proprietary formats.&lt;/p&gt;</description>
+      <title>How I started my blogging journey</title>
+      <link>http://localhost:1313/abeerblogs/docs/how-i-started-my-blogging-journey/</link>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/abeerblogs/docs/how-i-started-my-blogging-journey/</guid>
+      <description>&lt;h1 id=&#34;the-hardest-step-is-the-first-step&#34;&gt;The Hardest Step is the First step&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“You don’t have to be great to start, but you have to start to be great.” — Zig Ziglar&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;For the longest time, I hesitated to start a blog.&lt;/p&gt;
+&lt;p&gt;Not because I didn’t want to share—but because I thought I needed to be “ready.” Maybe after mastering Data Structures and Algorithms. Or after solving 500 problems on LeetCode. Or after building a perfect portfolio. But to be really honest, I realised that I could never find that perfect time to suffice my perfectionist personality. And, I do believe that this is one of my most important discoveries in life&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
