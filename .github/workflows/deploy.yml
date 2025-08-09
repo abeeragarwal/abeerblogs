@@ -42,6 +42,10 @@ jobs:
           rm -rf built-site/*
           cp -R public/* built-site/
 
+      - name: Disable Jekyll
+        run: |
+          touch built-site/.nojekyll
+
       - name: Configure git
         working-directory: built-site
         run: |
