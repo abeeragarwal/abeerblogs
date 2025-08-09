@@ -6,8 +6,17 @@
     <description>Recent content on Home</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/abeerblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/abeerblogs/docs/test/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/abeerblogs/docs/test/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/abeerblogs/images/i-got-bored-so-i-decided-to-draw-a-random-image-on-the-v0-4ig97vv85vjb1%201.png&#34;&gt;
+halllooooo hallooo&lt;/p&gt;
+&lt;p&gt;skjdbnkas&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How I started my blogging journey</title>
       <link>http://localhost:1313/abeerblogs/docs/how-i-started-my-blogging-journey/</link>
