@@ -1,4 +1,4 @@
-name: deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,16 +6,20 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -27,51 +31,22 @@ jobs:
         run: |
           hugo mod get || true
 
-      - name: Build
+      - name: Build site
         run: |
           hugo -D
 
-      - name: Checkout destination (gh-pages)
-        uses: actions/checkout@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          ref: gh-pages
-          path: built-site
+          path: ./public
 
-      - name: Copy built site
-        run: |
-          rm -rf built-site/*
-          cp -R public/* built-site/
-
-      - name: Disable Jekyll
-        run: |
-          touch built-site/.nojekyll
-
-      - name: Configure git
-        working-directory: built-site
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Check for changes
-        id: changes
-        working-directory: built-site
-        shell: bash
-        run: |
-          git add -A
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Commit and push
-        if: steps.changes.outputs.changed == 'true'
-        working-directory: built-site
-        shell: bash
-        run: |
-          git commit -m "deploy: ${GITHUB_SHA}"
-          git push origin gh-pages
-
-      - name: Skip (no changes)
-        if: steps.changes.outputs.changed != 'true'
-        run: echo "No changes to deploy."
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
