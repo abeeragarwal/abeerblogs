@@ -3,11 +3,6 @@ Title: How I started my blogging journey
 date: 2025-08-03
 draft: false
 tags:
-  - blog
-  - tech-journey
-  - obsidian
-  - hugo
-  - github
 ---
 # The Hardest Step is the First step
 
@@ -81,13 +76,15 @@ For me, Obsidian isn’t just a place to jot thoughts—it’s where I:
 - Organize my thoughts without distraction
     
 - Sync with my Hugo blog setup for seamless publishing
+    
 
 It keeps everything **offline**, fast, **and** fully in my **control**.
 
 Just like this blog that I was drafting Obsidian before posting it on this blog!
 
----
+![[Pasted image 20250803093617.png]]
 
+<<<<<<< HEAD
 ## Hugo
 
 ### What is Hugo?
@@ -200,3 +197,5 @@ So if you’ve been waiting for the _perfect_ moment to start your own blog, pro
 **Start now. Build messy. Learn fast. Refine later.**
 
 Your voice matters. And someone out there is waiting to hear it.
+=======
+>>>>>>> parent of def59d6 (Auto: update blog content and images)
