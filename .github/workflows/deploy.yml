@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_ENV: production
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -33,7 +35,7 @@ jobs:
 
       - name: Build site
         run: |
-          hugo -D
+          hugo --baseURL "https://abeeragarwal.github.io/abeerblogs/" --minify -D
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
