@@ -1,3 +1,80 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up job
+        run: echo "Starting deploy job"
+
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.148.2'
+          extended: true
+
+      - name: Install Hugo modules
+        run: |
+          hugo mod get || true
+
+      - name: Build
+        run: |
+          hugo -D
+
+      - name: Checkout destination
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: built-site
+
+      - name: Copy built site
+        run: |
+          rm -rf built-site/*
+          cp -R public/* built-site/
+
+      - name: Configure git
+        working-directory: built-site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Check for changes
+        id: changes
+        working-directory: built-site
+        shell: bash
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        working-directory: built-site
+        shell: bash
+        run: |
+          git commit -m "deploy: ${GITHUB_SHA}"
+          git push origin gh-pages
+
+      - name: Skip (no changes)
+        if: steps.changes.outputs.changed != 'true'
+        run: echo "No changes to deploy."
+
 name: Publish to GH Pages
 
 on:
