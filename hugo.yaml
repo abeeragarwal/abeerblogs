@@ -4,6 +4,7 @@ title: Home
 theme: PaperMod
 enableInlineShortcodes: true
 defaultContentLanguage: "en"
+canonifyURLs: true
 
 params:
   profileMode:
@@ -33,11 +34,11 @@ menu:
   main:
     - identifier: blog
       name: Blog
-      url: /docs/
+      url: docs/
       weight: 2
     - identifier: about
       name: About
-      url: /about/
+      url: about/
       weight: 3
 
 outputs:
