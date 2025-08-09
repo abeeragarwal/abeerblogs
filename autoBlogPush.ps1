@@ -1,29 +1,40 @@
 # === CONFIGURATION ===
+$ErrorActionPreference = "Stop"
+Set-StrictMode -Version Latest
+
 $obsidianPosts = "C:\Users\2006a\OneDrive\Documentos\Obsidian\03-Blog-Drafts\posts"
-$obsidianImages = "C:\Users\2006a\OneDrive\Documentos\Obsidian\ZettelKasten\Assests\Images"
-$hugoContent = "C:\Users\2006a\OneDrive\Documentos\abeerblogs\content\docs"
-$hugoImages = "C:\Users\2006a\OneDrive\Documentos\abeerblogs\static\images"
-$hugoRepo = "C:\Users\2006a\OneDrive\Documentos\abeerblogs"
+$hugoContent  = "C:\Users\2006a\OneDrive\Documentos\abeerblogs\content\docs"
+$hugoRepo     = "C:\Users\2006a\OneDrive\Documentos\abeerblogs"
 
-# === STEP 1: Sync content and images ===
-robocopy $obsidianPosts $hugoContent /E /MIR /XF _index.md
-robocopy $obsidianImages $hugoImages /E /MIR
-
-# === STEP 2: Rewrite image paths in Markdown files ===
-Get-ChildItem -Path $hugoContent -Recurse -Include *.md | ForEach-Object {
-    (Get-Content $_.FullName) |
-    ForEach-Object { $_ -replace '\(\.\.\/\.attachments\/(.*?)\)', '(/images/$1)' } |
-    Set-Content $_.FullName
+function Invoke-RoboCopy($Source, $Destination, $Options) {
+  robocopy $Source $Destination $Options
+  $code = $LASTEXITCODE
+  # Robocopy exit codes: 0-7 are success-ish; 8+ indicate failure
+  if ($code -ge 8) {
+    throw "Robocopy failed with exit code $code"
+  }
 }
 
-# === STEP 3: Git commit + push if needed ===
-Set-Location $hugoRepo
+try {
+  # === STEP 1: Sync content and images ===
+  robocopy $obsidianPosts $hugoContent /E /MIR /XF _index.md
 
-git add .
+  # === STEP 2: Run image normalization ===
+  Set-Location $hugoRepo
+  python .\images.py
 
-if ((git status --porcelain) -ne $null) {
-    git commit -m "Auto: update blog content and images"
+  # === STEP 3: Simple Git add/commit/push ===
+  git add .
+  $changes = git status --porcelain
+  if ($changes) {
+    git commit -m "update site"
     git push
-} else {
+    Write-Host "Changes committed and pushed."
+  } else {
     Write-Host "No changes to commit."
+  }
+}
+catch {
+  Write-Error $_
+  exit 1
 }
