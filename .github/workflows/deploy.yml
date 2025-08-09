@@ -12,9 +12,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up job
-        run: echo "Starting deploy job"
-
       - name: Checkout source
         uses: actions/checkout@v4
         with:
@@ -34,7 +31,7 @@ jobs:
         run: |
           hugo -D
 
-      - name: Checkout destination
+      - name: Checkout destination (gh-pages)
         uses: actions/checkout@v4
         with:
           ref: gh-pages
@@ -74,50 +71,3 @@ jobs:
       - name: Skip (no changes)
         if: steps.changes.outputs.changed != 'true'
         run: echo "No changes to deploy."
-
-name: Publish to GH Pages
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v3
-        with:
-          submodules: true
-
-      - name: Checkout destination
-        uses: actions/checkout@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          ref: gh-pages
-          path: built-site
-
-      - name: Setup Hugo
-        run: |
-          curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_linux-amd64.tar.gz'
-          tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo
-
-      - name: Install Hugo modules
-        run: ${RUNNER_TEMP}/hugo mod get
-
-      - name: Build
-        run: ${RUNNER_TEMP}/hugo
-
-      - name: Deploy
-        if: github.ref == 'refs/heads/main'
-        run: |
-          cp -R public/* ${GITHUB_WORKSPACE}/built-site/
-          cd ${GITHUB_WORKSPACE}/built-site
-          git add .
-          git config user.name 'Abeer Agarwal'
-          git config user.email '2006abeer.agarwal@gmail.com'
-          git commit -m 'Updated site'
-          git push
