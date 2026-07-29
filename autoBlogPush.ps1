@@ -1,5 +1,5 @@
 # === CONFIGURATION ===
-$obsidianPosts = "C:\Users\2006a\OneDrive\Documentos\Obsidian\03-Blog-Drafts\posts" 
+$obsidianPosts = "C:\Users\2006a\OneDrive\Documents\Obsidian\03-Blog-Drafts\posts" 
 $hugoContent   = "C:\Users\2006a\abeerblogs\content\docs"
 $hugoRepo      = "C:\Users\2006a\abeerblogs"
 $imagesScript  = "C:\Users\2006a\abeerblogs\images.py"
