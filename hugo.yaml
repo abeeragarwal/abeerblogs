@@ -1,5 +1,5 @@
 baseURL: "https://abeeragarwal.github.io/abeerblogs/"
-languageCode: en-us
+locale: en-us
 title: Home
 theme: PaperMod
 enableInlineShortcodes: true
@@ -7,6 +7,7 @@ defaultContentLanguage: "en"
 canonifyURLs: true
 
 params:
+  author: "Abeer Agarwal"
   profileMode:
     enabled: true
     title: "Abeer Agarwal"
