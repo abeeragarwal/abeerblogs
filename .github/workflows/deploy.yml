@@ -43,7 +43,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-	        --buildFuture \
+            --buildFuture \
             --buildDrafts \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
