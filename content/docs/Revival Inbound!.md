@@ -8,4 +8,3 @@ tags:
 ---
 # I like mommy milkers
 mommy
-![Image Description](/images/Pasted-image-20260730000710.png)
