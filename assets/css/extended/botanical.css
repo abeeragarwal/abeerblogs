@@ -10,8 +10,6 @@
   --code-block-bg: #eadecc;
   --code-bg: #eadecc;
   --border: #84714f;
-  --link: #5a6230;
-  --link-hover: #31231e;
 }
 
 .dark {
@@ -24,16 +22,40 @@
   --code-block-bg: #2b221e;
   --code-bg: #2b221e;
   --border: #5e5038;
-  --link: #b8c47a;
-  --link-hover: #ece5d8;
+}
+
+/* PaperMod uses --code-bg for .list pages; keep all pages on --theme */
+.list {
+  background: var(--theme);
 }
 
 a {
-  color: var(--link);
+  color: var(--primary);
 }
 
 a:hover {
-  color: var(--link-hover);
+  color: var(--secondary);
+}
+
+/* Profile buttons: cream text on olive-brown background */
+.button,
+.button a {
+  color: var(--theme);
+}
+
+.button:hover,
+.button a:hover {
+  color: var(--entry);
+}
+
+.dark .button,
+.dark .button a {
+  color: var(--primary);
+}
+
+.dark .button:hover,
+.dark .button a:hover {
+  color: var(--secondary);
 }
 
 /* Syntax highlighting — swap theme blues for botanical tones */
