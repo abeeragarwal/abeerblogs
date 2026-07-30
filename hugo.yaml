@@ -17,11 +17,7 @@ params:
         url: "https://github.com/abeeragarwal"
       - name: "LinkedIn"
         url: "https://www.linkedin.com/in/abeer-agarwal/"
-  
-  customCSS:
-    - css/custom.css
 
-  colorScheme: "auto"
   defaultTheme: "light"
   ShowReadingTime: true
   ShowShareButtons: true
