@@ -1,0 +1,33 @@
+/* PaperMod botanical palette — loaded via assets/css/extended/ */
+
+:root {
+  --theme: #f7f0df;
+  --entry: #eadecc;
+  --primary: #31231e;
+  --secondary: #6b7339;
+  --tertiary: #84714f;
+  --content: #31231e;
+  --code-block-bg: #eadecc;
+  --code-bg: #eadecc;
+  --border: #84714f;
+}
+
+a {
+  color: #112f57 !important;
+}
+
+.dark {
+  --theme: #1e1714;
+  --entry: #2b221e;
+  --primary: #ece5d8;
+  --secondary: #9ca662;
+  --tertiary: #5e5038;
+  --content: #ece5d8;
+  --code-block-bg: #2b221e;
+  --code-bg: #2b221e;
+  --border: #5e5038;
+}
+
+.dark a {
+  color: #688bb8 !important;
+}
