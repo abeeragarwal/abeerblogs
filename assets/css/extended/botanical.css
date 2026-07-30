@@ -10,10 +10,8 @@
   --code-block-bg: #eadecc;
   --code-bg: #eadecc;
   --border: #84714f;
-}
-
-a {
-  color: #112f57 !important;
+  --link: #5a6230;
+  --link-hover: #31231e;
 }
 
 .dark {
@@ -26,8 +24,37 @@ a {
   --code-block-bg: #2b221e;
   --code-bg: #2b221e;
   --border: #5e5038;
+  --link: #b8c47a;
+  --link-hover: #ece5d8;
 }
 
-.dark a {
-  color: #688bb8 !important;
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Syntax highlighting — swap theme blues for botanical tones */
+.chroma {
+  color: var(--content);
+  background-color: var(--code-block-bg) !important;
+}
+
+.chroma .na,
+.chroma .nd,
+.chroma .nf,
+.chroma .fm,
+.chroma .dl,
+.chroma .se {
+  color: var(--tertiary);
+}
+
+.chroma .o,
+.chroma .ow,
+.chroma .nb,
+.chroma .bp,
+.chroma .nl {
+  color: var(--secondary);
 }
