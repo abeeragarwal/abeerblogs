@@ -1,0 +1,30 @@
+/* LIGHT MODE */
+:root {
+  --bg-color: #f7f0df;          /* Old Lace */[cite: 1]
+  --card-bg-color: #eadecc;     /* Muted Cream */
+  --text-color: #31231e;        /* Dark Coffee */[cite: 1]
+  --primary-accent: #6b7339;    /* Dusty Olive */[cite: 1]
+  --secondary-accent: #112f57;  /* Oxford Navy */[cite: 1]
+  --border-color: #84714f;      /* Olive Wood */[cite: 1]
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1e1714;        /* Coffee Bean */[cite: 2]
+    --card-bg-color: #2b221e;   /* Shadow Grey */[cite: 2]
+    --text-color: #ece5d8;      /* Soft Linen */[cite: 2]
+    --primary-accent: #9ca662;  /* Palm Leaf */[cite: 2]
+    --secondary-accent: #688bb8;/* Dusty Denim */[cite: 2]
+    --border-color: #5e5038;    /* Deep Olive Wood */
+  }
+}
+
+body.dark, [data-theme="dark"] {
+  --bg-color: #1e1714;          /* Coffee Bean */[cite: 2]
+  --card-bg-color: #2b221e;     /* Shadow Grey */[cite: 2]
+  --text-color: #ece5d8;        /* Soft Linen */[cite: 2]
+  --primary-accent: #9ca662;    /* Palm Leaf */[cite: 2]
+  --secondary-accent: #688bb8;  /* Dusty Denim */[cite: 2]
+  --border-color: #5e5038;      /* Deep Olive Wood */
+}
