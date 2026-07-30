@@ -1,30 +1,52 @@
+/* ==========================================
+   PAPERMOD BOTANICAL MINIMALIST THEME
+   ========================================== */
+
 /* LIGHT MODE */
 :root {
-  --bg-color: #f7f0df;          /* Old Lace */[cite: 1]
-  --card-bg-color: #eadecc;     /* Muted Cream */
-  --text-color: #31231e;        /* Dark Coffee */[cite: 1]
-  --primary-accent: #6b7339;    /* Dusty Olive */[cite: 1]
-  --secondary-accent: #112f57;  /* Oxford Navy */[cite: 1]
-  --border-color: #84714f;      /* Olive Wood */[cite: 1]
+  --theme: #f7f0df;           /* Old Lace (Background) */[cite: 1]
+  --entry: #eadecc;           /* Soft Parchment (Cards/Boxes) */
+  --primary: #31231e;         /* Dark Coffee (Main Text & Titles) */[cite: 1]
+  --secondary: #6b7339;       /* Dusty Olive (Subtitles & Meta Text) */[cite: 1]
+  --tertiary: #84714f;        /* Olive Wood (Borders) */[cite: 1]
+  --content: #31231e;         /* Post Body Text */[cite: 1]
+  --hljs-bg: #eadecc;         /* Code Block Background */
+  --code-bg: #eadecc;         /* Inline Code Background */
 }
 
-/* DARK MODE */
+/* LINK COLORS FOR LIGHT MODE */
+a {
+  color: #112f57 !important;  /* Oxford Navy Links */[cite: 1]
+}
+
+/* DARK MODE (SYSTEM PREFERENCE & PAPERMOD DARK CLASS) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #1e1714;        /* Coffee Bean */[cite: 2]
-    --card-bg-color: #2b221e;   /* Shadow Grey */[cite: 2]
-    --text-color: #ece5d8;      /* Soft Linen */[cite: 2]
-    --primary-accent: #9ca662;  /* Palm Leaf */[cite: 2]
-    --secondary-accent: #688bb8;/* Dusty Denim */[cite: 2]
-    --border-color: #5e5038;    /* Deep Olive Wood */
+    --theme: #1e1714;         /* Coffee Bean (Background) */[cite: 2]
+    --entry: #2b221e;         /* Shadow Grey (Cards/Boxes) */[cite: 2]
+    --primary: #ece5d8;       /* Soft Linen (Main Text & Titles) */[cite: 2]
+    --secondary: #9ca662;     /* Palm Leaf (Subtitles & Meta Text) */[cite: 2]
+    --tertiary: #5e5038;      /* Deep Olive Wood (Borders) */
+    --content: #ece5d8;       /* Post Body Text */[cite: 2]
+    --hljs-bg: #2b221e;       /* Code Block Background */[cite: 2]
+    --code-bg: #2b221e;       /* Inline Code Background */[cite: 2]
+  }
+  a {
+    color: #688bb8 !important;/* Dusty Denim Links */[cite: 2]
   }
 }
 
-body.dark, [data-theme="dark"] {
-  --bg-color: #1e1714;          /* Coffee Bean */[cite: 2]
-  --card-bg-color: #2b221e;     /* Shadow Grey */[cite: 2]
-  --text-color: #ece5d8;        /* Soft Linen */[cite: 2]
-  --primary-accent: #9ca662;    /* Palm Leaf */[cite: 2]
-  --secondary-accent: #688bb8;  /* Dusty Denim */[cite: 2]
-  --border-color: #5e5038;      /* Deep Olive Wood */
+body.dark {
+  --theme: #1e1714;           /* Coffee Bean */[cite: 2]
+  --entry: #2b221e;           /* Shadow Grey */[cite: 2]
+  --primary: #ece5d8;         /* Soft Linen */[cite: 2]
+  --secondary: #9ca662;       /* Palm Leaf */[cite: 2]
+  --tertiary: #5e5038;        /* Deep Olive Wood */
+  --content: #ece5d8;         /* Post Body Text */[cite: 2]
+  --hljs-bg: #2b221e;         /* Code Block Background */[cite: 2]
+  --code-bg: #2b221e;         /* Inline Code Background */[cite: 2]
+}
+
+body.dark a {
+  color: #688bb8 !important;  /* Dusty Denim Links */[cite: 2]
 }

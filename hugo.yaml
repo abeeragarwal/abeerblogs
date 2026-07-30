@@ -21,7 +21,7 @@ params:
   customCSS:
     - css/custom.css
 
-  colorScheme: "nord"
+  colorScheme: "auto"
   defaultTheme: "light"
   ShowReadingTime: true
   ShowShareButtons: true
