@@ -1,0 +1,73 @@
+baseURL: "https://abeeragarwal.github.io/abeerblogs/"
+defaultContentLanguage: "en"
+title: "Abeer Agarwal"
+theme: "hugo-theme-stack"
+
+params:
+  mainSections:
+    - post
+    - posts
+    - docs
+
+  author:
+    name: "Abeer Agarwal"
+    headline: "Developer • Blogger • Problem Solver"
+
+  homeInfoParams:
+    title: "Welcome to my corner of the web! 👋"
+    content: "I document my code, mistakes, and thoughts on growth. Check out my latest article below or scroll down to browse through earlier posts."
+  
+  sidebar:
+    avatar: "/abeerblogs/img/avatar.jpg"
+    emoji: "" # Empty string removes the swirl emoji badge from avatar
+    subtitle: "Developer, Blogger, and a CERTIFIED Unc."
+    compact: false
+
+  article:
+    readingTime: false # Hides the 'X minute read' metadata
+    toc: true
+    heroImage: true
+    license:
+      enabled: false
+    list:
+      showTags: true
+
+  comments:
+    enabled: false
+
+  widgets:
+    homepage:
+      - type: tag-cloud
+    page: []
+
+menu:
+  main:
+    - identifier: home
+      name: "Home"
+      url: "/"
+      weight: 1
+      params:
+        icon: "home"
+    - identifier: about
+      name: "About"
+      url: "/about/"
+      weight: 2
+      params:
+        icon: "user"
+
+  social:
+    - identifier: github
+      name: "GitHub"
+      url: "https://github.com/abeeragarwal"
+      params:
+        icon: "brand-github"
+    - identifier: linkedin
+      name: "LinkedIn"
+      url: "https://www.linkedin.com/in/abeer-agarwal/"
+      params:
+        icon: "brand-linkedin"
+
+outputs:
+  home:
+    - HTML
+    - RSS

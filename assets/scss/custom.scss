@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Clean 3-Column Layout, Typography & Botanical Palette Overrides
+   ========================================================================== */
+
+/* 1. COLOR PALETTE & VARIABLES */
+:root {
+    --bg-color: #f7f0df;
+    --card-background: #eadecc;
+    --body-text-color: #31231e;
+    --primary-color: #31231e;
+    --secondary-color: #6b7339;
+    --tertiary-color: #84714f;
+    --accent-color: #6b7339;
+    --border-color: #84714f;
+    --code-background-color: #eadecc;
+}
+
+:root[data-scheme="dark"] {
+    --bg-color: #1e1714;
+    --card-background: #2b221e;
+    --body-text-color: #ece5d8;
+    --primary-color: #ece5d8;
+    --secondary-color: #9ca662;
+    --tertiary-color: #5e5038;
+    --accent-color: #9ca662;
+    --border-color: #5e5038;
+    --code-background-color: #2b221e;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--body-text-color) !important;
+}
+
+/* 2. MAIN CONTAINER LAYOUT (Locked Left Position to Prevent Sidebar Shifts) */
+body .main-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important; /* Prevents left sidebar from shifting on pages without a right sidebar */
+    align-items: flex-start !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    gap: 40px !important;
+    min-height: 100vh !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+}
+
+/* 3. LEFT SIDEBAR (Expanded Avatar & Scaled Text) */
+body aside.sidebar.left-sidebar {
+    order: 1 !important;
+    width: 260px !important;
+    flex-shrink: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    top: 0 !important;
+
+    .site-avatar {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .site-name a {
+        font-size: 2.2rem !important;
+    }
+
+    .site-description {
+        font-size: 1.5rem !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* 4. MIDDLE MAIN FEED (Expands smoothly when Right Sidebar is absent) */
+body main.main {
+    order: 2 !important;
+    flex-grow: 1 !important;
+    max-width: 1100px !important; /* Higher limit allows expansion on single pages */
+    margin-top: 0 !important;
+    padding-top: 45px !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Ensure post articles & single pages stretch full width of the main feed */
+body .article-list article,
+body .article-single,
+body .main-article {
+    width: 100% !important;
+}
+
+/* 5. RIGHT SIDEBAR (Layout Position Only) */
+body aside.sidebar.right-sidebar {
+    order: 3 !important;
+    width: 280px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    margin-top: 0 !important;
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    top: 0 !important;
+}
+
+/* Align Column Baselines */
+body .article-list article:first-child,
+body .widget-area .widget:first-child,
+body aside.right-sidebar .widget:first-child {
+    margin-top: 0 !important;
+}
+
+/* 6. MAIN FEED POST CARDS ONLY */
+body .article-list article,
+body .article-single,
+body .main-article {
+    background-color: var(--card-background) !important;
+    border-radius: 16px !important;
+    padding: 3rem 3.2rem !important;
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+
+body.article-page .main-article:not(.has-image) .article-header,
+body.article-page .main-article:not(.has-image) .article-details {
+    padding: 0 !important;
+}
+
+/* 7. TYPOGRAPHY BOOST */
+.article-title {
+    font-size: 2.8rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.article-content {
+    font-size: 1.85rem !important;
+    line-height: 1.95 !important;
+    padding: 0 !important;
+
+    p {
+        margin-bottom: 1.8em !important;
+    }
+}
+
+/* 8. BLOG POST CARD TAGS ONLY (Right Sidebar Tags Untouched, Margins Removed) */
+body .article-tags svg,
+body .article-category svg {
+    display: none !important;
+}
+
+body .article-tags a {
+    background-color: var(--secondary-color) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    box-shadow: none !important;
+    transition: opacity 0.2s ease !important;
+
+    &:hover {
+        opacity: 0.85 !important;
+    }
+}
+
+body .article-preview {
+    font-size: 1.75rem !important;
+    line-height: 1.8 !important;
+    color: var(--card-text-color-tertiary) !important;
+    margin: 0 !important;
+}
+
+body .article-tags-top {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Left Sidebar Cleanup */
+body .sidebar {
+    background: transparent !important;
+}
+
+body .sidebar .site-author {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+body .sidebar .site-author .emoji {
+    display: none !important;
+}
+
+/* Links & Typography */
+a {
+    color: var(--primary-color);
+    &:hover {
+        color: var(--secondary-color);
+    }
+}
+
+/* Hide Unused Empty Containers */
+.widget:empty,
+.related-content:empty {
+    display: none !important;
+}
+

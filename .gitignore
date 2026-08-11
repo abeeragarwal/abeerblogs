@@ -1,0 +1,8 @@
+# Hugo build outputs and local tooling files
+/public/
+/resources/
+.hugo_build.lock
+assets/jsconfig.json
+hugo_old.yaml
+.DS_Store
+Thumbs.db

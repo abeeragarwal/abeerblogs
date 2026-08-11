@@ -3,4 +3,11 @@ title: "About"
 disableSocial: true
 ---
 
-Hey! I'm Abeer — a developer with a passion for solving problems, learning, and standing out. Curious by nature, I’m always building, exploring, and sharing. Whether it’s coding, writing, or crafting ideas, I enjoy bringing clarity and creativity to everything I do. Outside the screen, you’ll find me playing football, strategizing over chess, or sipping some good ol' coffee. This blog is where I share my tech journey — one note at a time.
+Hi! I'm Abeer and I currently live in Dehradun, India. I am in my second year of B.Tech. studying from UPES Dehradun.
+
+I am a coding enthusiast with a passion for solving problems (except my own). I am an extremist that always likes to stand out. 
+
+Right now, I'm expanding my knowledge in Data Science by integrating complex mathematics and algorithms.
+In my free time, you'll find me reading Isekai Mangas, playing chess, football, or sipping some coffee.
+
+This blog is where I document my code, ideas, opinions, mistakes or just my pent-up rants.
